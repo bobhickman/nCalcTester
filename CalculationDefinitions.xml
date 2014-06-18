@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<ArrayOfCalculationDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CalculationDefinition>
+    <Category>Profiles</Category>
+    <Formula>100 * (FY1_STD_DEV/Dabs(ANNUAL_ACTUAL_EPS))</Formula>
+    <Name>IBESImpliedStandardDeviationOfFiscalYear1Estimates</Name>
+    <Parameters>
+      <string>FY1_STD_DEV</string>
+      <string>ANNUAL_ACTUAL_EPS</string>
+    </Parameters>
+  </CalculationDefinition>
+  <CalculationDefinition>
+    <Category>Profiles</Category>
+    <Formula>100 * if( MONTH_DIFF &lt; 7, (FY1_MED_ESTIMATE/ANNUAL_ACTUAL_EPS)-1, if( MONTH_DIFF &lt; 12, ((FY1_MED_ESTIMATE+FY2_MED_ESTIMATE)/(ANNUAL_ACTUAL_EPS+FY1_MED_ESTIMATE))-1, (FY2_MED_ESTIMATE/FY1_MED_ESTIMATE)-1 ))</Formula>
+    <Name>IBESRolling12MonthEstimatedGrowthMedian</Name>
+    <Parameters>
+      <string>MONTH_DIFF</string>
+      <string>FY1_MED_ESTIMATE</string>
+      <string>FY2_MED_ESTIMATE</string>
+      <string>ANNUAL_ACTUAL_EPS</string>
+    </Parameters>
+  </CalculationDefinition>
+  <CalculationDefinition>
+    <Category>Performance</Category>
+    <Formula>100 * (Sum(RETURN)/Count(RETURN))</Formula>
+    <Name>AverageReturn</Name>
+    <Parameters>
+      <string>RETURN</string>
+    </Parameters>
+  </CalculationDefinition>
+</ArrayOfCalculationDefinition>
