@@ -10,6 +10,9 @@ using DataAccess;
 
 namespace nCalcTester
 {
+    /// <summary>
+    /// Tester for NCalc
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
