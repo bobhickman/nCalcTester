@@ -11,7 +11,7 @@ using DataAccess;
 namespace nCalcTester
 {
     /// <summary>
-    /// Tester for NCalc
+    /// Tester for NCalc.
     /// </summary>
     class Program
     {
